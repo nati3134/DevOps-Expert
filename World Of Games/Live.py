@@ -1,6 +1,7 @@
 from MemoryGame import memory_game
 from GuessGame import guess_game 
 from CurrencyRouletteGame import CurrencyRouletteGame
+from score import add_score
 
 def welcome():
      first_name = input ("Enter your name:")
@@ -42,6 +43,7 @@ def load_game():
 
      game_map = {'1': memory_game, '2': guess_game, '3': CurrencyRouletteGame }
 
-     game_map[selected_game](selected_difficulty)
-
+     res = game_map[selected_game](selected_difficulty)
+     if res:
+          add_score(selected_difficulty)
      

@@ -19,8 +19,9 @@ def memory_game(level):
 
     if usr_guess == result:
         print ("god job!")
-    else:
-        print ("better luck next time")
+        return True
+    print ("better luck next time")
+    return False
 
 
 

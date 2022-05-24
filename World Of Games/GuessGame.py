@@ -20,7 +20,7 @@ def guess_game(difficulty):
        continue
     
     if user_guess == random_number:
-        print ("good job!")
-    else:
-        print ("better luck next time")
-
+        print ("god job!")
+        return True
+    print ("better luck next time")
+    return False
